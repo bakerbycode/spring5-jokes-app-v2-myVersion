@@ -18,7 +18,7 @@ public class JokeController {
 
     @GetMapping({"/",""}) //Alte Schreibweise: @RequestMapping
     public String showJoke(Model model){
-    model.addAttribute(jokeService.getChuckNorrisJoke());
+    model.addAttribute("joke", jokeService.getChuckNorrisJoke());
 
         return "index";
     }
